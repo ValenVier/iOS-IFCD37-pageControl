@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mqk-n0-jIQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pageControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wEW-4G-30j">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EZ-9R-S5o">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                        <color key="backgroundColor" red="0.89801708629999999" green="0.34237824789999999" blue="0.25803792539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="PageControl -&gt; Switch">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="switchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zAX-yW-JLx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQt-5O-EOM">
+                                        <rect key="frame" x="0.0" y="258" width="414" height="258"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="PageControl -&gt; Array">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="array1Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4cl-mP-Red"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgj-UT-48k">
+                                        <rect key="frame" x="0.0" y="516" width="414" height="258"/>
+                                        <color key="backgroundColor" red="0.91860741379999999" green="0.3653338552" blue="0.24743887780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="pageControl - &gt; Scroll">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="scrollAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1O-WB-ywd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wEW-4G-30j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9SW-UU-q4y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wEW-4G-30j" secondAttribute="bottom" id="9ui-uz-eJ6"/>
+                            <constraint firstItem="wEW-4G-30j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jcS-OJ-OqO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wEW-4G-30j" secondAttribute="trailing" id="oeo-3J-2mx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W1A-Su-fvp"/>
+                    <connections>
+                        <outlet property="array1" destination="bQt-5O-EOM" id="T8o-91-yuK"/>
+                        <outlet property="scroll" destination="Bgj-UT-48k" id="2th-Cb-doR"/>
+                        <outlet property="switch" destination="1EZ-9R-S5o" id="SgW-Ka-hPX"/>
+                        <segue destination="CoH-re-pQ2" kind="show" identifier="sg1" id="oSb-J0-mMU"/>
+                        <segue destination="uHx-ur-cay" kind="show" identifier="sg2" id="0vF-jP-fip"/>
+                        <segue destination="cPH-TN-4vy" kind="show" identifier="sg3" id="IkA-oA-thj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="113"/>
+        </scene>
+        <!--Page Control2 View Controller-->
+        <scene sceneID="0vx-VV-mJD">
+            <objects>
+                <viewController id="uHx-ur-cay" customClass="pageControl2ViewController" customModule="pageControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qm5-Wd-Cyg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KKd-qF-lmh">
+                                <rect key="frame" x="146" y="434" width="122.5" height="28"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="pageControlAction:" destination="uHx-ur-cay" eventType="valueChanged" id="1WQ-SA-5Ud"/>
+                                    <action selector="pageControlAction:" destination="CoH-re-pQ2" eventType="valueChanged" id="bYL-pg-aGm"/>
+                                    <action selector="pageControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="gls-D8-476"/>
+                                </connections>
+                            </pageControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bSt-Nb-wHF">
+                                <rect key="frame" x="20" y="108" width="374" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="ZUx-e5-94l"/>
+                                </constraints>
+                                <string key="text">PAG 3 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cIt-0d-hXW">
+                                <rect key="frame" x="20" y="108" width="374" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="x3o-FP-Q3f"/>
+                                </constraints>
+                                <string key="text">PAG 1 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RUZ-BM-cOY">
+                                <rect key="frame" x="20" y="108" width="374" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="ref-TH-o3k"/>
+                                </constraints>
+                                <string key="text">PAG 2 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mnp-5p-N1D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bSt-Nb-wHF" firstAttribute="leading" secondItem="mnp-5p-N1D" secondAttribute="leading" constant="20" id="1Kt-db-19l"/>
+                            <constraint firstItem="cIt-0d-hXW" firstAttribute="top" secondItem="mnp-5p-N1D" secondAttribute="top" constant="20" id="AxN-Iu-biw"/>
+                            <constraint firstItem="RUZ-BM-cOY" firstAttribute="top" secondItem="mnp-5p-N1D" secondAttribute="top" constant="20" id="CJ6-ag-82l"/>
+                            <constraint firstItem="mnp-5p-N1D" firstAttribute="trailing" secondItem="bSt-Nb-wHF" secondAttribute="trailing" constant="20" id="H3Z-7q-7TU"/>
+                            <constraint firstItem="bSt-Nb-wHF" firstAttribute="top" secondItem="mnp-5p-N1D" secondAttribute="top" constant="20" id="W2w-Kc-w30"/>
+                            <constraint firstItem="RUZ-BM-cOY" firstAttribute="leading" secondItem="mnp-5p-N1D" secondAttribute="leading" constant="20" id="gjK-qj-GX1"/>
+                            <constraint firstItem="mnp-5p-N1D" firstAttribute="trailing" secondItem="cIt-0d-hXW" secondAttribute="trailing" constant="20" id="lk5-7P-97d"/>
+                            <constraint firstItem="KKd-qF-lmh" firstAttribute="centerY" secondItem="Qm5-Wd-Cyg" secondAttribute="centerY" id="pKh-5S-hmn"/>
+                            <constraint firstItem="cIt-0d-hXW" firstAttribute="leading" secondItem="mnp-5p-N1D" secondAttribute="leading" constant="20" id="wFS-er-LW7"/>
+                            <constraint firstItem="mnp-5p-N1D" firstAttribute="trailing" secondItem="RUZ-BM-cOY" secondAttribute="trailing" constant="20" id="wKq-Px-BAc"/>
+                            <constraint firstItem="KKd-qF-lmh" firstAttribute="centerX" secondItem="Qm5-Wd-Cyg" secondAttribute="centerX" id="z4m-kR-o5X"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qRM-6V-mI8"/>
+                    <connections>
+                        <outlet property="pag1" destination="cIt-0d-hXW" id="x9R-2h-RlR"/>
+                        <outlet property="pag2" destination="RUZ-BM-cOY" id="ieS-7t-Z0G"/>
+                        <outlet property="pag3" destination="bSt-Nb-wHF" id="dt9-d8-Hhb"/>
+                        <outlet property="pageControl" destination="KKd-qF-lmh" id="5jT-kK-1Bj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYn-Y6-YTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="113"/>
+        </scene>
+        <!--Page Control3 View Controller-->
+        <scene sceneID="FZQ-3V-a5U">
+            <objects>
+                <viewController id="cPH-TN-4vy" customClass="pageControl3ViewController" customModule="pageControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qZj-7G-xWl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2rL-8Z-Whk">
+                                <rect key="frame" x="20" y="108" width="374" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="q8e-Iz-d81"/>
+                                </constraints>
+                                <mutableString key="text">PAG 3 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0W4-cN-qaC">
+                                <rect key="frame" x="20" y="108" width="374" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="DTq-SX-jCC"/>
+                                </constraints>
+                                <mutableString key="text">PAG 1 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RHJ-6m-KE0">
+                                <rect key="frame" x="20" y="108" width="374" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="RdK-BJ-Uby"/>
+                                </constraints>
+                                <string key="text">PAG 2 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8gG-Za-LgQ">
+                                <rect key="frame" x="146" y="434" width="122.5" height="28"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="pageControlAction:" destination="CoH-re-pQ2" eventType="valueChanged" id="9af-RY-gfu"/>
+                                    <action selector="pageControlAction:" destination="cPH-TN-4vy" eventType="valueChanged" id="KeK-EP-dfP"/>
+                                    <action selector="pageControlAction:" destination="uHx-ur-cay" eventType="valueChanged" id="cjQ-7r-ROz"/>
+                                    <action selector="pageControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="gHy-49-Tjn"/>
+                                </connections>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FZq-er-mjw">
+                                <rect key="frame" x="87" y="561" width="240" height="128"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="wvD-tu-gRG"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="SBe-uD-tFb"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fxY-wH-eK8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8gG-Za-LgQ" firstAttribute="centerX" secondItem="qZj-7G-xWl" secondAttribute="centerX" constant="0.25" id="1FJ-nc-Z3E"/>
+                            <constraint firstItem="fxY-wH-eK8" firstAttribute="trailing" secondItem="2rL-8Z-Whk" secondAttribute="trailing" constant="20" id="2v5-eR-Fm2"/>
+                            <constraint firstItem="8gG-Za-LgQ" firstAttribute="centerY" secondItem="qZj-7G-xWl" secondAttribute="centerY" id="5i6-np-Zew"/>
+                            <constraint firstItem="fxY-wH-eK8" firstAttribute="trailing" secondItem="RHJ-6m-KE0" secondAttribute="trailing" constant="20" id="CkG-yP-qfv"/>
+                            <constraint firstItem="0W4-cN-qaC" firstAttribute="leading" secondItem="fxY-wH-eK8" secondAttribute="leading" constant="20" id="JQM-Lq-hDg"/>
+                            <constraint firstItem="fxY-wH-eK8" firstAttribute="trailing" secondItem="0W4-cN-qaC" secondAttribute="trailing" constant="20" id="JzJ-uy-Pbu"/>
+                            <constraint firstItem="2rL-8Z-Whk" firstAttribute="top" secondItem="fxY-wH-eK8" secondAttribute="top" constant="20" id="Lwk-uk-U0B"/>
+                            <constraint firstItem="RHJ-6m-KE0" firstAttribute="top" secondItem="fxY-wH-eK8" secondAttribute="top" constant="20" id="cbv-oZ-qC8"/>
+                            <constraint firstItem="RHJ-6m-KE0" firstAttribute="leading" secondItem="fxY-wH-eK8" secondAttribute="leading" constant="20" id="kwL-9y-xSz"/>
+                            <constraint firstItem="FZq-er-mjw" firstAttribute="centerX" secondItem="qZj-7G-xWl" secondAttribute="centerX" id="mtV-AB-O2h"/>
+                            <constraint firstItem="FZq-er-mjw" firstAttribute="centerY" secondItem="qZj-7G-xWl" secondAttribute="centerY" id="qpS-yD-Uqy"/>
+                            <constraint firstItem="0W4-cN-qaC" firstAttribute="top" secondItem="fxY-wH-eK8" secondAttribute="top" constant="20" id="xlY-KF-lVG"/>
+                            <constraint firstItem="2rL-8Z-Whk" firstAttribute="leading" secondItem="fxY-wH-eK8" secondAttribute="leading" constant="20" id="yV0-p5-WbC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YrV-PN-ipT"/>
+                    <connections>
+                        <outlet property="pag1" destination="0W4-cN-qaC" id="Wjm-Tm-npj"/>
+                        <outlet property="pag2" destination="RHJ-6m-KE0" id="Pja-RZ-fLD"/>
+                        <outlet property="pag3" destination="2rL-8Z-Whk" id="fRL-FK-uWV"/>
+                        <outlet property="pageControl" destination="8gG-Za-LgQ" id="S1x-Zq-xHm"/>
+                        <outlet property="scrollView" destination="FZq-er-mjw" id="2VH-ej-fRC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xB3-2s-EBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="814"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mEu-JG-5uJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mqk-n0-jIQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S5e-NX-wSC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BMb-Wc-42p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YIY-GM-dif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="112.5"/>
+        </scene>
+        <!--Page Control1 View Controller-->
+        <scene sceneID="8rh-Cf-fhx">
+            <objects>
+                <viewController id="CoH-re-pQ2" customClass="pageControl1ViewController" customModule="pageControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lXg-35-ROI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="egN-rg-ZvC">
+                                <rect key="frame" x="146" y="434" width="122.5" height="28"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="pageControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="GX9-LF-Jzw"/>
+                                    <action selector="pageControlAction:" destination="CoH-re-pQ2" eventType="valueChanged" id="lwx-ZF-yzm"/>
+                                </connections>
+                            </pageControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b9P-75-Mja">
+                                <rect key="frame" x="20" y="108" width="374" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="MLa-vP-4wX"/>
+                                </constraints>
+                                <string key="text">PAG 1 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LCj-oO-CoD">
+                                <rect key="frame" x="20" y="108" width="374" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="m02-Ob-eyX"/>
+                                </constraints>
+                                <string key="text">PAG 2 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S3c-XP-eqw">
+                                <rect key="frame" x="20" y="108" width="374" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Gxd-7d-VjS"/>
+                                </constraints>
+                                <string key="text">PAG 3 Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rcH-fB-ZjF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b9P-75-Mja" firstAttribute="top" secondItem="rcH-fB-ZjF" secondAttribute="top" constant="20" id="0S4-aX-UZI"/>
+                            <constraint firstItem="LCj-oO-CoD" firstAttribute="top" secondItem="rcH-fB-ZjF" secondAttribute="top" constant="20" id="65H-th-H3Z"/>
+                            <constraint firstItem="rcH-fB-ZjF" firstAttribute="trailing" secondItem="S3c-XP-eqw" secondAttribute="trailing" constant="20" id="EFw-76-Qph"/>
+                            <constraint firstItem="egN-rg-ZvC" firstAttribute="centerY" secondItem="lXg-35-ROI" secondAttribute="centerY" id="UAI-UE-0z9"/>
+                            <constraint firstItem="rcH-fB-ZjF" firstAttribute="trailing" secondItem="b9P-75-Mja" secondAttribute="trailing" constant="20" id="bgb-U4-tmg"/>
+                            <constraint firstItem="egN-rg-ZvC" firstAttribute="centerX" secondItem="lXg-35-ROI" secondAttribute="centerX" id="ga9-mE-lxM"/>
+                            <constraint firstItem="b9P-75-Mja" firstAttribute="leading" secondItem="rcH-fB-ZjF" secondAttribute="leading" constant="20" id="lgN-KS-mrD"/>
+                            <constraint firstItem="S3c-XP-eqw" firstAttribute="leading" secondItem="rcH-fB-ZjF" secondAttribute="leading" constant="20" id="nQD-Md-fZg"/>
+                            <constraint firstItem="LCj-oO-CoD" firstAttribute="leading" secondItem="rcH-fB-ZjF" secondAttribute="leading" constant="20" id="rhC-0L-hhk"/>
+                            <constraint firstItem="S3c-XP-eqw" firstAttribute="top" secondItem="rcH-fB-ZjF" secondAttribute="top" constant="20" id="s4W-zd-i56"/>
+                            <constraint firstItem="rcH-fB-ZjF" firstAttribute="trailing" secondItem="LCj-oO-CoD" secondAttribute="trailing" constant="20" id="yvv-bZ-4W9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MJO-gd-Dol"/>
+                    <connections>
+                        <outlet property="pag1" destination="b9P-75-Mja" id="MCs-Pp-aem"/>
+                        <outlet property="pag2" destination="LCj-oO-CoD" id="0Vc-Ie-Fbf"/>
+                        <outlet property="pag3" destination="S3c-XP-eqw" id="pZ2-UC-hCP"/>
+                        <outlet property="pageControl" destination="egN-rg-ZvC" id="1mE-tC-oeZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erE-8e-O5V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="-564"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
